@@ -1,0 +1,13 @@
+.navbar {
+    background-color: transparent;
+    a:hover {
+        cursor: pointer;
+    }
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+}
+
+// @import '~bootstrap/scss/variables'
