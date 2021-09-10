@@ -1,3 +1,15 @@
+@import './colors.scss';
+* {
+  background-color: $theme-primary-color;
+  color: $theme-grey-color;
+  h1>span {
+    color: $theme-highlight-color;
+  }
+  h1, h2, h3, h4, h5, h6, p, span, a {
+    background-color: transparent;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Merriweather Sans', sans-serif;

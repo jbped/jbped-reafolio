@@ -1,0 +1,22 @@
+$theme-primary-color: #0b0c10;
+$theme-secondary-color: #1f2833;
+$theme-grey-color: #c5c6c7;
+$theme-highlight-color: #66fcf1;
+$theme-dark-highlight-color: #45a28e;
+
+// $theme-primary-color: rgba(11, 12, 16, 1);
+// $theme-secondary-color: rgba(31, 40, 51, 1);
+// $theme-grey-color: rgba(197, 198, 199, 1);
+// $theme-highlight-color: rbga(102, 252, 241, 1);
+// $theme-dark-highlight-color: rgba(69, 162, 142, 1);
+
+// .9 Opacity
+$theme-primary-color-9: rgba(11, 12, 16, .9);
+$theme-secondary-color-9: rgba(31, 40, 51, .9);
+$theme-grey-color-9: rgba(197, 198, 199, .9);
+$theme-highlight-color-9: rbga(102, 252, 241, .9);
+$theme-dark-highlight-color-9: rgba(69, 162, 142, .9);
+
+.transparent {
+    background-color: transparent;
+}

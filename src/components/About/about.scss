@@ -1,0 +1,7 @@
+@import '../../colors.scss';
+
+img {
+    box-shadow: $theme-highlight-color 10px 10px 0px,
+                $theme-highlight-color 0px 10px 0px,
+                $theme-highlight-color 10px 0px 0px;
+}
