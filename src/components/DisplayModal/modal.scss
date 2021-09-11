@@ -1,0 +1,112 @@
+@import '../../colors.scss';
+
+.modalBackdrop {
+	background: rgba(0, 0, 0, 0.9);
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.modalContainer {
+	background: $theme-secondary-color;
+	max-width: 100%;
+	margin: 50px auto;
+	padding: 15px;
+	width: 960px;
+    box-shadow: $theme-highlight-color 20px 20px 0px,
+                $theme-highlight-color 0px 20px 0px,
+                $theme-highlight-color 20px 0px 0px;
+}
+
+// .modalHeader {
+//     align-items: center;
+// }
+
+.close-btn {
+    box-sizing: content-box;
+    height: 0;
+    padding: 0;
+    line-height: 2rem;
+    // background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    
+    opacity: 1;
+    i {
+        color:$theme-grey-color;
+        font-size: 2rem;
+    }
+    
+}
+
+.close-btn:hover {
+    i {
+        color:$theme-highlight-color;
+    }
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalTitle {
+    color: $theme-highlight-color;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    span{
+        margin: 0 .8rem 0 0;
+        font-weight: bold;
+    }
+}
+
+.iconography {
+    color: $theme-grey-color; 
+    background-color: transparent;
+}
+
+.link-icons {
+    display: flex;
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        span{
+            color: $theme-grey-color;
+            line-height: 1rem;
+        }
+    }
+    a:hover {
+        span {
+            color: $theme-highlight-color;
+        }
+        i {
+            color: $theme-highlight-color;
+        }
+    }
+    a:active {
+        span{
+            color: $theme-dark-highlight-color;
+            line-height: 1rem;
+        }
+        i {
+            color: $theme-dark-highlight-color;
+        }
+    }
+}
+
+.github-ico {
+    font-size: 1rem; 
+}
+
+.link-ico {
+    font-size: 1rem; 
+}

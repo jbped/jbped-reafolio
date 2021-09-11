@@ -1,7 +1,13 @@
+@import '../../colors.scss';
+
 .navbar {
     span:hover {
         cursor: pointer;
     }
+    
+}
+.nav-text {
+    color: $theme-highlight-color;
 }
 
 // @import '~bootstrap/scss/variables'

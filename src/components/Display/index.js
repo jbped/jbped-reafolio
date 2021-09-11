@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Modal from '../DisplayModal';
 import './display.scss';
 
 function Display() {
@@ -7,7 +8,7 @@ function Display() {
             name: "Goal Getter",
             folder: "goal-getter",
             description: "Goal Getter is an app that helps you ACHIEVE your goals! Anything is possible when you make a plan with milestones and a date in mind! Simply create an account and get started on adding new goals!",
-            technology: ["Node.js", "Sequelize"],
+            technology: ["HTML", "CSS - Bootstrap", "Javascript - JQuery", "Node.js", "Sequelize"],
             deployedUrl: "https://goal-getters-app.herokuapp.com/",
             repo: "https://github.com/jbped/Goal-Getter",
             highlight: true//boolean
@@ -47,19 +48,35 @@ function Display() {
         projectDetails.filter(project => project.highlight === true ? highlightedProjects.push(project) : secondaryProjects.push(project))
     }
 
-    highlightProjects()
-    console.log("highlightedProjects", highlightedProjects, "secondaryProjects", secondaryProjects)
+    const [selectedProject, setSelectedProject] = useState()
+    const [isModalOpen, setIsModalOpen] = useState(false)
 
+    const toggleModal = (project, i) => {
+        setSelectedProject({ ...project, index: i });
+        setIsModalOpen(!isModalOpen);
+    }
+
+    highlightProjects()
+
+    useEffect(() => {
+        isModalOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible';
+    }, [isModalOpen])
+
+    // useEffect(() => {
+    //     highlightProjects()
+    // }, [])
+    
     return (
         <div className="container">
+            {isModalOpen && (<Modal selectedProject={selectedProject} onClose={toggleModal} />)}
             <h1 className=""><span>Portfolio</span></h1>
             <section className="row g-5 px-3 grid-gap">
-                {highlightedProjects.map((project) => (
+                {highlightedProjects.map((project, i) => (
                     <div className="tile col-12 p-0" key={project.folder}>
                         <img src={require(`../../assets/images/${project.folder}/primary.png`).default} alt={project.name}></img>
                         <div className="overlay">
                             <div className="overlay-details">
-                                <h3 className="overlay-text">{project.name}</h3> {/* Project Name */}
+                                <h3 className="overlay-text" onClick={() => toggleModal(project, i)}>{project.name}</h3> {/* Project Name */}
                                 <div className="d-flex justify-content-center transparent overlay-icons">
                                     <a href={project.repo} target="_blank" rel="noreferrer"><i className="bi-github iconography github-ico mx-2"></i></a>
                                     <a href={project.deployedUrl} target="_blank" rel="noreferrer"><i className="bi bi-link-45deg iconography link-ico mx-2"></i></a>
@@ -68,12 +85,12 @@ function Display() {
                         </div>
                     </div>
                 ))}
-                {secondaryProjects.map((project) => (
+                {secondaryProjects.map((project, i) => (
                     <div className="tile col-lg-6 col-sm-12 p-0" key={project.folder}>
                         <img src={require(`../../assets/images/${project.folder}/primary.png`).default} alt={project.name}></img>
                         <div className="overlay">
                             <div className="overlay-details">
-                                <h3 className="overlay-text">{project.name}</h3> {/* Project Name */}
+                                <h3 className="overlay-text" onClick={() => toggleModal(project, i)}>{project.name}</h3> {/* Project Name */}
                                 <div className="d-flex justify-content-center transparent overlay-icons">
                                     <a href={project.repo} target="_blank" rel="noreferrer"><i className="bi-github iconography github-ico mx-2"></i></a>
                                     <a href={project.deployedUrl} target="_blank" rel="noreferrer"><i className="bi bi-link-45deg iconography link-ico mx-2"></i></a>

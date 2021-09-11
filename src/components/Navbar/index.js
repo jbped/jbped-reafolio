@@ -24,9 +24,9 @@ function NavBar(props) {
   }
   
   return (
-    <nav className="navbar sticky-nav sticky-top navbar-expand-lg navbar-light">
+    <nav className="navbar sticky-nav sticky-top navbar-expand-lg navbar-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#about" onClick={() => { updateNavStates("About") }}>Jake Pedigo</a>
+        <a className="navbar-brand nav-text" href="#about" onClick={() => { updateNavStates("About") }}>Jake Pedigo</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onClick={updateCollapseNav}>
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -34,7 +34,7 @@ function NavBar(props) {
           <ul className="navbar-nav">
             {pages.map((page) => (
               <li className="nav-item" key={page.name}>
-                <span className={`nav-link ${page === currentPage && 'active'}`} onClick={() => {updateNavStates(page)}}>{page.name}</span>
+                <span className={`nav-link nav-text ${page === currentPage && 'active'}`} onClick={() => {updateNavStates(page)}}>{page.name}</span>
               </li>
             ))}
           </ul>
