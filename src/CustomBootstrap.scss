@@ -1,5 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+@import './colors.scss';
+// @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
 
-$font-family-sans-serif:      'Merriweather Sans', sans-serif;
+// @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;400&family=Questrial&display=swap');
+
+@import "~bootstrap/scss/functions";
+
+// Edit of Standard Color Pallet
+$primary: $theme-highlight-color;
+$secondary: $theme-dark-highlight-color;
+$success: $theme-success-color;
+$danger: $theme-danger-color;
+$dark: $theme-primary-color;
+
+// // Edit the input focus width and color
+// $input-btn-focus-width: 1px;
+// $input-btn-focus-color-opacity:1;
+// $input-btn-focus-color: rgba($secondary, $input-btn-focus-color-opacity); 
+// $input-focus-border-color: tint-color($secondary, 50%);
+
+@import "bootstrap/scss/variables";
+
+// Custom Colors
+$dark-light: #f5f5f5;
+$darker-light: #f2f2f2;
+$darkest-light: #878787;
+
+$custom-colors: (
+    "dark-light": $dark-light,
+    "darker-light": $darker-light,
+    "darkest-light": $darkest-light,
+);
+
+// $custom-font-sizes: (
+//    7: $font-size-sm 
+// );
+
+// $font-sizes: map-merge($font-sizes, $custom-font-sizes);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// $font-family-sans-serif:      'Merriweather Sans', sans-serif;
+// $font-family-sans-serif:      'Azeret Mono', monospace;
+$font-family-sans-serif:      'Questrial', sans-serif;
 
 @import "~bootstrap/scss/bootstrap-reboot"; 
+
+@import "bootstrap/scss/mixins";
+
+@import "bootstrap/scss/buttons";
+
+@import "bootstrap/scss/utilities";
+
+// DON'T WRITE ANY CODE BELOW THE IMPORT LINE
+@import "~bootstrap/scss/bootstrap";

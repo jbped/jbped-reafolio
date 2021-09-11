@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from '../DisplayModal';
+import Project from '../Project';
 import './display.scss';
 
 function Display() {
@@ -69,34 +70,24 @@ function Display() {
     return (
         <div className="container">
             {isModalOpen && (<Modal selectedProject={selectedProject} onClose={toggleModal} />)}
-            <h1 className=""><span>Portfolio</span></h1>
+            <h1 className="no-select text-uppercase text-primary">Portfolio</h1>
             <section className="row g-5 px-3 grid-gap">
                 {highlightedProjects.map((project, i) => (
                     <div className="tile col-12 p-0" key={project.folder}>
-                        <img src={require(`../../assets/images/${project.folder}/primary.png`).default} alt={project.name}></img>
-                        <div className="overlay">
-                            <div className="overlay-details">
-                                <h3 className="overlay-text" onClick={() => toggleModal(project, i)}>{project.name}</h3> {/* Project Name */}
-                                <div className="d-flex justify-content-center transparent overlay-icons">
-                                    <a href={project.repo} target="_blank" rel="noreferrer"><i className="bi-github iconography github-ico mx-2"></i></a>
-                                    <a href={project.deployedUrl} target="_blank" rel="noreferrer"><i className="bi bi-link-45deg iconography link-ico mx-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        <Project 
+                            project={project}
+                            i={i}
+                            toggleModal={toggleModal}
+                        />
                     </div>
-                ))}
+                    ))}
                 {secondaryProjects.map((project, i) => (
                     <div className="tile col-lg-6 col-sm-12 p-0" key={project.folder}>
-                        <img src={require(`../../assets/images/${project.folder}/primary.png`).default} alt={project.name}></img>
-                        <div className="overlay">
-                            <div className="overlay-details">
-                                <h3 className="overlay-text" onClick={() => toggleModal(project, i)}>{project.name}</h3> {/* Project Name */}
-                                <div className="d-flex justify-content-center transparent overlay-icons">
-                                    <a href={project.repo} target="_blank" rel="noreferrer"><i className="bi-github iconography github-ico mx-2"></i></a>
-                                    <a href={project.deployedUrl} target="_blank" rel="noreferrer"><i className="bi bi-link-45deg iconography link-ico mx-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        <Project 
+                            project={project}
+                            i={i}
+                            toggleModal={toggleModal}
+                        />
                     </div>
                 ))}
             </section>

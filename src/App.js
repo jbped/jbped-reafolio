@@ -4,6 +4,7 @@ import './App.scss'
 import About from './components/About'
 import Display from './components/Display'
 import NavBar from './components/Navbar'
+import ContactForm from './components/ContactForm'
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
       <main className="">
         <About></About>
         <Display></Display>
+        <ContactForm></ContactForm>
       </main>
       <footer className="">
 

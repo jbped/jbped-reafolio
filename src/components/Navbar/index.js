@@ -24,17 +24,17 @@ function NavBar(props) {
   }
   
   return (
-    <nav className="navbar sticky-nav sticky-top navbar-expand-lg navbar-dark">
+    <nav className="navbar sticky-nav sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand nav-text" href="#about" onClick={() => { updateNavStates("About") }}>Jake Pedigo</a>
+        <a className="navbar-brand nav-text text-primary fst-italic fw-bolder fs-1 text-uppercase" href="#about" onClick={() => { updateNavStates("About") }}>Jake Pedigo</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onClick={updateCollapseNav}>
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className={`${collapseNav ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav transparent">
             {pages.map((page) => (
-              <li className="nav-item" key={page.name}>
-                <span className={`nav-link nav-text ${page === currentPage && 'active'}`} onClick={() => {updateNavStates(page)}}>{page.name}</span>
+              <li className="transparent nav-item " key={page.name}>
+                <span className={`nav-link nav-text no-select ${page === currentPage && 'active text-uppercase fw-bold'} fs-4`} onClick={() => {updateNavStates(page)}}>{page.name}</span>
               </li>
             ))}
           </ul>
