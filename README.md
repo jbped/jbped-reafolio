@@ -3,6 +3,8 @@
 ## Description 
 
 [Reafolio](https://jbped.github.io/jbped-reafolio/) is my first iteration of my portfolio build in the React framework. Information about myself, the projects that I have worked on, and my resume are included in this website.
+![Portfolio/Projects Page](https://user-images.githubusercontent.com/76881086/133010641-7f8a1051-ef63-4f80-a330-fcd6b3fd5db3.png)
+
 
 ## Table of Contents 
 
