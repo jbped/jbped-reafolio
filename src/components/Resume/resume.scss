@@ -1,0 +1,17 @@
+@import '../../colors.scss';
+
+.res-icon {
+  font-size: 1.5rem;
+}
+
+.resume-interactions:hover {
+  cursor: pointer;
+  i, span {
+    color: $theme-highlight-color;
+    }
+}
+.resume-interactions:active {
+  i, span {
+    color: $theme-dark-highlight-color;
+  }
+}

@@ -11,6 +11,20 @@
     }
 }
 
+.no-decoration {
+    text-decoration: none;
+}
+
+.section-backdrop {
+    background-color: $theme-secondary-color-9;
+}
+
+.section-backdrop-borders {
+    box-shadow: $theme-highlight-color 10px 10px 0px,
+                $theme-highlight-color 0px 10px 0px,
+                $theme-highlight-color 10px 0px 0px;
+}
+
 .iconography {
     color: $theme-grey-color; 
     background-color: transparent;

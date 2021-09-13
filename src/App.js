@@ -5,6 +5,7 @@ import About from './components/About'
 import Display from './components/Display'
 import NavBar from './components/Navbar'
 import ContactForm from './components/ContactForm'
+import Resume from './components/Resume'
 
 function App() {
 
@@ -42,16 +43,20 @@ function App() {
             (<Display></Display>))
           || (currentPage.name === 'Contact Me' &&
             (<ContactForm></ContactForm>))
+          || (currentPage.name === 'Resume' &&
+            (<Resume></Resume>))
         }
       </main>
-      <footer className="d-flex justify-content-center py-2">
-        <h2 className="text-primary fst-italic fw-bolder">
-          Jake Pedigo <span className="fst-normal fw-lighter fs-5">&copy; 2021</span>
+      <footer className="d-flex flex-wrap justify-content-center pb-2 pt-3 section-backdrop">
+        <h2 className="text-primary fst-italic fw-bolder no-select">
+          Jake Pedigo <span className="fst-normal fw-lighter fs-5 no-select">&copy; 2021</span>
         </h2>
-        <span className="fs-3 fw-bolder mx-3">|</span>
-        <a href="https://github.com/jbped" target="_blank" rel="noreferrer"><i className="bi-github iconography footer-icon mx-3"></i></a>
-        <a href="https://www.linkedin.com/in/jacob-pedigo/" target="_blank" rel="noreferrer"><i className="bi bi-linkedin iconography footer-icon mx-3"></i></a>
-        <a href="https://stackoverflow.com/users/15526819/jbped" target="_blank" rel="noreferrer"><i class="fab fa-stack-overflow iconography footer-icon mx-3"></i></a>
+        <span className="fs-3 fw-bolder mx-3 no-select">|</span>
+        <div>
+          <a href="https://github.com/jbped" target="_blank" rel="noreferrer"><i className="bi-github iconography footer-icon mx-3"></i></a>
+          <a href="https://www.linkedin.com/in/jacob-pedigo/" target="_blank" rel="noreferrer"><i className="bi bi-linkedin iconography footer-icon mx-3"></i></a>
+          <a href="https://stackoverflow.com/users/15526819/jbped" target="_blank" rel="noreferrer"><i className="fab fa-stack-overflow iconography footer-icon mx-3"></i></a>
+        </div>
       </footer>
     </div>
   );

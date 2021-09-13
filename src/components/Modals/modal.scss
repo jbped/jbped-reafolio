@@ -1,0 +1,65 @@
+@import '../../colors.scss';
+
+.modalBackdrop {
+	background: rgba(0, 0, 0, 0.9);
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 999999;
+    display: flex;
+    align-items: center;
+}
+
+.modalContainer {
+	background: $theme-primary-color;
+	max-width: 100%;
+	margin: 50px auto;
+	padding: 15px;
+	width: 960px;
+    z-index: 9999999;
+    box-shadow: $theme-highlight-color 10px 10px 0px,
+                $theme-highlight-color 0px 10px 0px,
+                $theme-highlight-color 10px 0px 0px;
+}
+
+// .modalHeader {
+//     align-items: center;
+// }
+
+.primary-title {
+    
+}
+
+.close-btn {
+    box-sizing: content-box;
+    height: 0;
+    padding: 0;
+    line-height: 2rem;
+    // background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    
+    opacity: 1;
+    i {
+        color:$theme-grey-color;
+        font-size: 2rem;
+    }
+    
+}
+
+.close-btn:hover {
+    i {
+        color:$theme-highlight-color;
+    }
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalTitle {
+    color: $theme-highlight-color;
+}

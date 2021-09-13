@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Modal from '../DisplayModal';
+import DisplayModal from '../Modals/DisplayModal';
 import Project from '../Project';
 import './display.scss';
 
@@ -69,7 +69,7 @@ function Display() {
     
     return (
         <div className="container">
-            {isModalOpen && (<Modal selectedProject={selectedProject} onClose={toggleModal} />)}
+            {isModalOpen && (<DisplayModal selectedProject={selectedProject} onClose={toggleModal} />)}
             <h1 className="no-select text-uppercase text-primary">Portfolio</h1>
             <section className="row g-5 px-3 grid-gap">
                 {highlightedProjects.map((project, i) => (

@@ -1,6 +1,7 @@
 @import '../../colors.scss';
 
 .navbar {
+    background-color: $theme-primary-color-9;
     span:hover {
         cursor: pointer;
     }
