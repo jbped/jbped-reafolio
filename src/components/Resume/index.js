@@ -47,7 +47,7 @@ export default function Resume() {
         {/* JavaScript */}
         <div className="row mb-3">
           <div className="col-lg-2 col-sm-12 my-auto">
-            <p className="fs-4 my-auto">JavaScript:</p>
+            <p className="fs-4 my-auto">Javascript:</p>
           </div>
           <div className="progress col-lg-10 col-sm-12 my-auto px-0 bg-light" style={{ height: "2rem", borderRadius: "0" }}>
             <div className="progress-bar text-dark fs-5" role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">6</div>

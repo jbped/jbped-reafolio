@@ -41,6 +41,24 @@ function Display() {
             repo: "https://github.com/jbped/brain-picker",
             highlight: false//boolean
         },
+        {
+            name: "Weatherly",
+            folder: "weatherly",
+            description: "Weatherly is a simple weather app. Upon load user is asked to allow location services. This will allow the application to get the current weather for their location. The user can then search for a specific location, the locations weather will be displayed and the the location will be saved to the previous locations array allowing for quick access to previous searches.",
+            technology: ["HTML", "CSS - Bootstrap", "Javascript/JQuery", "API - OpenWeather One Call & OpenWeather Geolocation"],
+            deployedUrl: "https://jbped.github.io/weatherly/",
+            repo: "https://github.com/jbped/weatherly",
+            highlight: false//boolean
+        },
+        {
+            name: "Scratch Note",
+            folder: "scratch-note",
+            description: "Scratch Note is an Node.js/Express.js notebook. Users are able to add, delete, and review notes that they have written. It provides an simple experience, that makes it quick and easy to scratch down thoughts and ideas.",
+            technology: ["HTML", "CSS", "Javascript", "Node.js", "Express.js"],
+            deployedUrl: "https://scratch-note.herokuapp.com/",
+            repo: "https://github.com/jbped/scratch-note",
+            highlight: false//boolean
+        },
     ]);
     const highlightedProjects = [];
     const secondaryProjects = [];
