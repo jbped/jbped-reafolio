@@ -6,6 +6,15 @@ import './display.scss';
 function Display() {
     const [projectDetails] = useState([
         {
+            name: "CooKit",
+            folder: "cookit",
+            description: "This app will change the way you see recipes! You can easily add your own recipes and save them for later or see what the newest recipes are from others around the world. Saving recipes from others is easy and if you like something in their recipes you can easily edit it and take it out!",
+            technology: ["React", "Material UI", "Node.js", "Mongoose", "React Beautiful DnD"],
+            deployedUrl: "https://cookit-book.herokuapp.com/",
+            repo: "https://github.com/jbped/cookit",
+            highlight: true//boolean
+        },
+        {
             name: "Goal Getter",
             folder: "goal-getter",
             description: "Goal Getter is an app that helps you ACHIEVE your goals! Anything is possible when you make a plan with milestones and a date in mind! Simply create an account and get started on adding new goals!",
